@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+    <script>
+        const INDEX_URL = "http://localhost:8080/home"
+        const CATE_LOG_URL = "http://localhost:8080/home/decades"
+        $(function () {
+            $.get(CATE_LOG_URL, function (result) {
+                console.log(result);
+            });
+
+            //获取主要数据
+            $.get(INDEX_URL, function (result) {
+                if (result.status === 200) {
+                    console.log(result);
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+
+    </header>
+    <div id="content">
+    </div>
+
+    <footer>
+
+    </footer>
+</div>
+
+</body>
+</html>
