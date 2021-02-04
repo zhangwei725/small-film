@@ -21,6 +21,9 @@
         <mybatis.spring.version>2.0.6</mybatis.spring.version>
         <mysql.version>8.0.22</mysql.version>
         <druid.version>1.2.4</druid.version>
+        <fileupload.version>1.4</fileupload.version>
+        <lombok.version>1.18.16</lombok.version>
+        <jackson.version>2.12.1</jackson.version>
 
     </properties>
 
@@ -39,7 +42,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.12.1</version>
+            <version>${jackson.version}</version>
         </dependency>
         <!--  mybatis 相关的 依赖 starter  -->
         <dependency>
@@ -66,8 +69,21 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.16</version>
+            <version>${lombok.version}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${fileupload.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>
@@ -75,6 +91,8 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 
     <build>

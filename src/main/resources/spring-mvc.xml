@@ -7,4 +7,14 @@
     <context:component-scan base-package="com.smart.web.controller"/>
     <!--    开启springmvc的注解支持 -->
     <mvc:annotation-driven/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--        包括多文件   一次上传文件的最大值 单位是b-->
+        <!--        20m -->
+        <property name="maxUploadSize" value="20480000"/>
+        <!--        限制单个文件的上传大小  单位是b-->
+        <property name="maxUploadSizePerFile" value="5120000"/>
+        <!--        -->
+        <!--        <property name="maxInMemorySize"></property>-->
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
 </beans>
